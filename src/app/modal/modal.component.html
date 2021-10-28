@@ -1,0 +1,7 @@
+
+<div class="overlay" (click)="switch()" [hidden]="hidden">
+  <div class="container"  (click)="$event.stopPropagation()" [hidden]="hidden" >
+    <button (click)="switch()">X</button>
+    <div #entry [innerHTML]="theHtmlString | safeHtml"></div>
+    </div>
+</div>
