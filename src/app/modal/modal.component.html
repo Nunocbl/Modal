@@ -1,7 +1,13 @@
+<div class="overlay" (click)="switch()" [class.hidden]="hidden">
 
-<div class="overlay" (click)="switch()" [hidden]="hidden">
-  <div class="container"  (click)="$event.stopPropagation()" [hidden]="hidden" >
-    <button (click)="switch()">X</button>
-    <div #entry [innerHTML]="theHtmlString | safeHtml"></div>
+    <div class="outcontainer" (click)="$event.stopPropagation()">
+        <div class="flex">
+            <h1 class="title">{{title}}</h1>
+            <button class="exitbtn" (click)="switch()">X</button>
+        </div>
+        <div class="container " [class.fadein]='!containerEnd' (scroll)="onScroll($event)">
+            <ng-content></ng-content>
+            <!-- <div #entry [innerHTML]="theHtmlString | safeHtml"></div> -->
+        </div>
     </div>
 </div>

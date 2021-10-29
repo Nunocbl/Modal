@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test.component.scss']
 })
 export class TestComponent implements OnInit {
+  @Output() test = new EventEmitter<boolean>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  alert(string:string){
+    alert(string)
+  }
+
+  outputing(){
+    this.test.emit()
+  }
+
 
 }

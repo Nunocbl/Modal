@@ -7,8 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'modal';
-
+  titleForModal= 'Custom title for modal';
   hidden:boolean = true;
+
   switch(){
     this.hidden=!this.hidden;
 

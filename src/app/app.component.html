@@ -1,2 +1,8 @@
 <button (click)="switch()">ok</button>
-<modal (statechange)="switch()" [hidden]="hidden" ></modal>
+<modal (statechange)="switch()" [title]="titleForModal" [hidden]="hidden" >
+
+  <app-test (test)="switch()">
+  </app-test>
+
+</modal>
+<div class="spacer"></div>
